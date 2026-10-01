@@ -19,11 +19,20 @@ elseif ($path == 'logout')
     // Выход
     $response = controllerAdmin::logoutAction();
 }
-else if ($path == 'newsAdmin')
+elseif ($path == 'newsAdmin')
 {
     // Список новостей
     $response = controllerAdminNews::NewsList();
 }
+elseif ($path == 'newsAdd')
+{
+    $response = controllerAdminNews::NewsAddForm();
+}
+elseif ($path == 'newsAddResult')
+{
+    $response = controllerAdminNews::NewsAddResult();
+}
+
 else
 {   // Страница не существует
     $response = controllerAdmin::error404();
