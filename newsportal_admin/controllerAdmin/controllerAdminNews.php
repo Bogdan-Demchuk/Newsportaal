@@ -18,5 +18,16 @@ class controllerAdminNews{
         include_once ('viewAdmin/newsAddForm.php');
     }
 
+    public static function NewsEditForm($id) {
+        $arr = modelAdminCategory::getCategoryList();
+        $detail = modelAdminNews::getNewsDetail($id);
+        include_once ('viewAdmin/newsEditForm.php');
+    }
+
+    public static function NewsEditResult($id) {
+        $test = modelAdminNews::getNewsEdit($id);
+        include_once ('viewAdmin/newsEditForm.php');
+    }
+
 }//class
 ?>

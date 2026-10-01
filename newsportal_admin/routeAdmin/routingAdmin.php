@@ -32,6 +32,14 @@ elseif ($path == 'newsAddResult')
 {
     $response = controllerAdminNews::NewsAddResult();
 }
+elseif ($path == 'newsEdit' and isset($_GET['id']))
+{
+    $response = controllerAdminNews::NewsEditForm($_GET['id']);
+}
+elseif ($path == 'newsEditResult' and isset($_GET['id']))
+{
+    $response = controllerAdminNews::NewsEditResult($_GET['id']);
+}
 
 else
 {   // Страница не существует
